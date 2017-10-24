@@ -1,0 +1,41 @@
+{
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "mocha": true,
+        "browser": true
+    },
+    "rules": {
+        "strict": ["error", "global"],
+        "quotes": [
+            "error",
+            "single",
+            {
+                "avoidEscape": true,
+                "allowTemplateLiterals": true
+            }
+        ],
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "no-constant-condition": "off",
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+        "space-before-function-paren": "off",
+        "camelcase": "off",
+        "eol-last": "off",
+        "eqeqeq": "off",
+        "no-undef": "off",
+        "no-undef-init": "off"
+    },
+    "extends": "vue"
+}

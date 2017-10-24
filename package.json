@@ -1,11 +1,37 @@
 {
-  "name": "vue-box-selector",
-  "version": "1.0.0",
-  "description": "Vue box selector",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Albert",
-  "license": "MIT"
+    "name": "vue-box-selector",
+    "version": "1.0.0",
+    "description": "Vue box selector",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepush": "npm run lint",
+        "lint": "./node_modules/.bin/eslint src/**/*.js src/**/*.vue",
+        "fix": "./node_modules/.bin/eslint --fix src/**/*.js src/**/*.vue",
+        "analyzer":
+            "./node_modules/.bin/webpack --config ./build/webpack.build.config.js --profile --json > stats.json && ./node_modules/.bin/webpack-bundle-analyzer stats.json -m static"
+    },
+    "author": "Albert",
+    "license": "MIT",
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-core": "^6.26.0",
+        "babel-eslint": "^8.0.1",
+        "babel-loader": "^7.1.2",
+        "cross-env": "^5.1.0",
+        "css-loader": "^0.28.7",
+        "eslint": "^4.9.0",
+        "eslint-config-vue": "^2.0.2",
+        "eslint-plugin-vue": "^2.1.0",
+        "husky": "^0.14.3",
+        "less": "^2.7.3",
+        "less-loader": "^4.0.5",
+        "style-loader": "^0.19.0",
+        "vue": "^2.5.2",
+        "vue-loader": "^13.3.0",
+        "vue-template-compiler": "^2.5.2",
+        "webpack": "^3.8.1",
+        "webpack-bundle-analyzer": "^2.9.0",
+        "webpack-dev-server": "^2.9.3"
+    }
 }
